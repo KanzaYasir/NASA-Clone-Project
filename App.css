@@ -1,0 +1,789 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    width: 100vw;
+    height: 12vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    position: relative; /* Added relative positioning for the hamburger button */
+}
+.navbar h3 {
+    font-weight: bold;
+    color: white;
+    margin-left: 3vw;
+    cursor: pointer;
+}
+#downarrowImg {
+    filter: invert(1);
+    width: 3vw;
+    height: 4vh;
+    cursor: pointer;
+}
+.navbar input {
+    width: 13vw;
+    height: 4vh;
+    margin-left: 2vw;
+    background-color: black;
+    border: 0.1vw solid gray;
+    color: grey;
+}
+.navbar input:hover {
+    border: 0.3vw solid rgb(63, 121, 221);
+}
+#nasalogo {
+    width: 12vw;
+    height: 9vh;
+    margin-left: 17vw;
+    cursor: pointer;
+}
+.navbar ul {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 2vw;
+    margin-right: 1vw;
+}
+.navbar ul:hover {
+    cursor: pointer;
+}
+.navbar ul li {
+    color: white;
+    font-weight: bold;
+    list-style: none;
+    font-size: 1.2rem;
+}
+.navbar button {
+    background-color: black;
+    border: 0.1vw solid red;
+    color: white;
+    margin-left: 0.2vw;
+    height: 2.5vh;
+    font-size: 0.6rem;
+    width: 2vw;
+}
+.navbar button:hover {
+    background-color: rgb(103, 28, 28);
+    cursor: pointer;
+}
+.navbar span {
+    font-size: 0.8vw;
+}
+.menu {
+    display: none;
+    width: 35%;
+    height: auto;
+    font-size: 1rem;
+}
+.btnn-menu {
+    display: none;
+    width: 6vw; /* Adjust width to fit the hamburger menu icon */
+    height:6vw; /* Adjust height to fit the hamburger menu icon */
+    background: transparent;
+    border: 0.1vw solid white;
+    cursor: pointer;
+    position: absolute; /* Position the button on the left */
+    left: 5vw; /* Adjust as necessary */
+    top: 30%;
+}
+.btnn-search {
+    display: none;
+    width: 6vw; /* Adjust width to fit the hamburger menu icon */
+    height:6vw; /* Adjust height to fit the hamburger menu icon */
+    background: transparent;
+    
+    cursor: pointer;
+    position: absolute; /* Position the button on the left */
+    right: 5vw; /* Adjust as necessary */
+    top: 30%;
+}
+#humberger-menu
+{
+    width: 5vw;
+    height: 5vh;
+    filter: invert(1);
+}
+#search
+{
+    width: 5vw;
+    height: 5vh;
+   
+}
+.menu {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning */
+    top: 10%; /* Adjust as needed */
+    left: 0;
+    width: 55%; /* Adjust as needed */
+    height: auto; /* Height based on content */
+    background-color: black;
+    color: white;
+    padding: 1vw;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Items displayed vertically */
+}
+
+.menu ul li {
+    margin: 0.5vw 0;
+    color: white;
+}
+
+.menu.show {
+    display: block; /* Show menu when this class is added */
+}
+
+.menu-close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 1vw; /* Space between close button and menu items */
+}
+
+/* Media queries */
+@media (max-width: 1024px) { /* Tablets */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar h3, input, ul {
+        display: none;
+    }
+
+    #downarrowImg {
+        display: none;
+    }
+
+    .btnn-menu {
+        display: block;
+    }
+
+    #nasalogo {
+        width: 11vw;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+    .btnn-search{
+        display: block;
+    }
+   
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navbar input, h3 {
+        display: none;
+    }
+
+    .btnn-menu {
+        display: block;
+    }
+
+    #nasalogo {
+        width: 11vw;
+        height: 10vh;
+        margin: 0;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+    .btnn-search{
+        display: block;
+    }
+   
+}
+
+
+.HomeSecContainer {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .HomeSecVideo {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 95vh; 
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .HomeContent
+  {
+    position: absolute;
+  }
+  .HomeSecH1 {
+    color: white;
+     /* Change to absolute or relative depending on your needs */
+   font-size: 4.3rem;
+   width: 65%;
+   margin-left: 3vw;
+   margin-top: 20vh;
+   margin-bottom: 1vw;
+  }
+  .HomeContent p
+  {
+     color: white;
+     margin-left: 3vw;
+  }
+  .HomeContent button
+  {
+    
+     font-weight: bold;
+     font-size: 1.5rem;
+     margin-left: 3vw;
+  }
+  .HomeFooterContent
+  {
+     margin-top: 8vw;
+     display: flex;
+     justify-content: space-evenly;
+
+  }
+  .margineLine
+  {
+      border-top: 0.1vw solid grey;
+      width: 85%;
+    opacity: 0.5;
+      margin-left: 2vw;
+  }
+  @media (max-width: 1024px) {
+    .HomeFooterContent
+    {
+
+       margin-top: 28vw;
+       display: flex;
+      flex-direction: column;
+    }
+    .HomeSecVideo {
+       
+        height: 150vh; 
+       
+      }
+      .HomeSecH1 
+      {
+        font-size: 2rem;
+        margin-left: 5vw;
+        width: 100vw;
+      }
+      .HomeContent p
+      {
+       margin-left: 5vw;
+      }
+      .HomeContent button
+  {
+     margin-left: 5vw;
+  }
+}
+
+  
+ 
+  .newsSection
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin: 50vw 5vw 4vw 5vw;
+  }
+  .newsSection h1
+  {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .newsSection {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align items horizontally */
+      justify-content: center; /* Center align items vertically */
+      margin: 10vw 3vw; /* Adjust margin for better spacing */
+    }
+  
+    .newsSection h1 {
+      font-size: 2rem; /* Adjust font size for tablets */
+    }
+  }
+  @media (max-width: 767px) {
+    .newsSection {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align items horizontally */
+      justify-content: center; /* Center align items vertically */
+      margin: 90vw 2vw; /* Adjust margin for small screens */
+    }
+  
+    .newsSection h1 {
+      font-size: 1.5rem; /* Adjust font size for mobile screens */
+    }
+  }
+    
+  
+  .newsContainer {
+    width: 100vw;
+    height: auto;
+    margin: 3vw;
+    display: flex;
+    gap: 2vw; /* Gap between news and article sections */
+    cursor: pointer;
+  }
+  
+  .news1 {
+    position: relative;
+    width: 60%; /* Occupy 60% of the width */
+  }
+  
+  #news {
+    width: 100%; /* Fit the container width */
+    height: 90%; /* Maintain aspect ratio */
+    display: block;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: offset-x offset-y blur-radius spread-radius color;
+
+  }
+  
+  .newsContent {
+    position: absolute;
+    top: 40%; /* Adjust positioning as needed */
+    left: 10px; /* Adjust positioning as needed */
+   /* Ensure padding is included */
+    color: white; /* Make text readable on top of image */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .newsContent p, .newsContent h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .article {
+    width: 15%; /* Occupy 20% of the width */
+    display: flex;position: relative;
+    flex-direction: column;
+    gap: 1vw; /* Space between elements within the article section */
+    position: relative;
+  }
+  .article1content 
+  {
+    width: 60%;
+    top: 40%;
+    left: 12%;
+    position: absolute;
+  }
+  .article1content p
+  {
+    font-size: 1.3rem;
+  }
+  
+  #article1 {
+    width: 100%; /* Full width within .article */
+    height: 100%; /* Maintain aspect ratio */
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .article2 {
+    width: 15%; /* Occupy 20% of the width */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 1vw; /* Space between elements within the article section */
+    position: relative;
+  }
+  .article2content 
+  {
+    width: 100%;
+    top: 40%;
+    left: 3%;
+    position: absolute;
+  }
+  .article2content p
+  {
+    font-size: 1.3rem;
+  }
+  
+  #article2 {
+    width: 100%; /* Full width within .article */
+    height: 100%; /* Maintain aspect ratio */
+    box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(-10px 10px 15px rgba(0, 0, 0, 0.5)); 
+  }
+ 
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .newsContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align items horizontally */
+      gap: 2vw; /* Maintain gap between news and article sections */
+      margin: 3vw; /* Maintain margin around the container */
+    }
+  
+    .news1, .article, .article2 {
+      width: 80%; /* Adjust width for tablets to fit the screen better */
+    }
+  
+    #news, #article1, #article2 {
+      width: 100%; /* Ensure the images fit the width of their containers */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .newsContent, .article1content, .article2content {
+      width: 100%; /* Ensure content width fits the container */
+      position: absolute; /* Ensure content is positioned over images */
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Center content */
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      color: white; /* Ensure text color contrasts */
+      padding: 10px; /* Add padding */
+      box-sizing: border-box; /* Ensure padding is included in width */
+      z-index: 10; /* Ensure content appears above the image */
+      text-align: center; /* Center align text */
+    }
+  
+    .newsContent p, .newsContent h3, .article1content p {
+      font-size: 1.2rem; /* Adjust font size for readability */
+    }
+  
+    .article {
+      margin-top: 2vw; /* Add margin for separation between articles */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .newsContainer {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center align items horizontally */
+      gap: 2vw; /* Maintain gap between news and article sections */
+      margin: 2vw; /* Adjust margin for smaller screens */
+    }
+  
+    .news1, .article, .article2 {
+      width: 90%; /* Adjust width for mobile to fit the screen better */
+    }
+  
+    #news, #article1, #article2 {
+      width: 100%; /* Ensure the images fit the width of their containers */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .newsContent, .article1content, .article2content {
+      width: 100%; /* Ensure content width fits the container */
+      position: absolute; /* Ensure content is positioned over images */
+      top: 50%; /* Center vertically */
+      left: 50%; /* Center horizontally */
+      transform: translate(-50%, -50%); /* Center content */
+      
+      color: white; /* Ensure text color contrasts */
+      padding: 8px; /* Adjust padding for smaller screens */
+      box-sizing: border-box; /* Ensure padding is included in width */
+      z-index: 10; /* Ensure content appears above the image */
+      text-align: center; /* Center align text */
+    }
+  
+    .newsContent p, .newsContent h3, .article1content p {
+      font-size: 1rem; /* Adjust font size for better readability */
+    }
+  }
+
+  .podcastContainer
+  {
+     display: flex;
+     justify-content: space-evenly;
+    cursor: pointer;
+     
+  }
+ 
+  .podcast
+  {
+    width: 22%;
+    height: auto;
+    gap: 1vw;
+    display: flex;
+  }
+
+  #podcastImg
+  {
+    width: 8vw;
+    height: 13vh;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 767px) {
+    .podcastContainer {
+      flex-direction: column; /* Stack podcast items vertically */
+      align-items: center; /* Center align items horizontally */
+    }
+  
+    .podcast {
+      width: 90%; /* Adjust width to fit the screen better */
+      margin-bottom: 1vw; /* Add margin between podcasts */
+      flex-direction: column; /* Ensure vertical stacking inside each podcast */
+      align-items: center; /* Center align content inside each podcast */
+    }
+  
+    #podcastImg {
+      width: 20vw; /* Adjust width for mobile screens */
+      height: 15vh; /* Adjust height for mobile screens */
+    }
+  }
+
+  /* .WeatherContainer
+  {
+    display: flex;
+    justify-content: space-between;
+
+  } */
+
+/* Base styles for WeatherContainer */
+.WeatherContainer {
+  display: flex;
+  justify-content: space-between; /* Space out the children */
+  align-items: center; /* Vertically center items if needed */
+  margin: 0 2vw; /* Add horizontal padding if needed */
+}
+
+/* Base styles for WeatherData */
+.WeatherData {
+  margin-top: 4vw;
+  width: 45%; /* Adjust width as needed */
+}
+
+/* Base styles for weather image */
+#weatherImg {
+  width: 90%; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 5vw; /* Create gap between image and WeatherData */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  /* Animation for fade-in effect on load */
+  animation: fadeIn 1s ease-out; /* Apply fade-in animation */
+}
+
+/* Hover effects for weather image */
+#weatherImg:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Keyframe animation for a subtle fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media queries for tablets and mobile screens */
+@media (max-width: 767px) {
+  .WeatherContainer {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 1vw; /* Adjust margin for mobile screens */
+  }
+
+  .WeatherData {
+    width: 90%; /* Adjust width for mobile screens */
+    margin-top: 1vw; /* Reduce margin for mobile screens */
+  }
+
+  .WeatherData .para {
+    font-size: 1rem; /* Adjust font size for mobile screens */
+  }
+
+  #weatherImg {
+    width: 90%; /* Adjust width for mobile screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 1vw; /* Add top margin for spacing */
+  }
+}
+
+ /* Base styles for desktop */
+/* Base styles for desktop */
+/* Base styles for desktop */
+/* Fade-in animation on component load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Container for video elements */
+.spaceMissionContainer {
+  display: flex;
+  gap: 1vw;
+  margin-left: 3vw;
+}
+
+/* Style for each video wrapper */
+.videoWrapper {
+  position: relative;
+  width: 35vw;
+  height: 45vh;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Hover effects for video wrappers */
+.videoWrapper:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Media queries for tablets and mobile screens */
+@media (max-width: 768px) {
+  .spaceMissionContainer {
+    display: flex;
+    flex-direction: column; /* Stack videos vertically */
+    align-items: center; /* Center the videos horizontally */
+    gap: 1.5vh; /* Adjust gap for vertical spacing */
+    margin-left: 0; /* Adjust margin for smaller screens */
+  }
+
+  .videoWrapper {
+    width: 90vw; /* Adjust width to fit smaller screens */
+    height: 50vh; /* Adjust height to fit smaller screens */
+  }
+}
+
+/* Timeline.css */
+
+.timeline {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.timeline-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.timeline-title {
+  font-size: 1.5em;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.timeline-title:hover {
+  color: #007BFF;
+}
+
+.timeline-content {
+  display: none;
+  padding: 10px 0;
+}
+
+.timeline-content p {
+  margin: 0 0 10px;
+}
+
+.timeline-content iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  border-radius: 8px;
+}
+
+.Explorecontainer {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Explorecontainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container while preserving aspect ratio */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.exploreContent {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+   /* Semi-transparent background for better text readability */
+  width: 80%; /* Adjust width to ensure responsiveness */
+  max-width: 800px; /* Max width for larger screens */
+  z-index: 1; /* Ensure content appears above the image */
+}
+
+@media (max-width: 1024px) {
+  .exploreContent {
+    width: 100%; /* Adjust width for tablets */
+  }
+
+  .exploreContent h1 {
+    font-size: 2.5rem; /* Smaller font size for tablets */
+  }
+
+  .exploreContent h4 {
+    font-size: 1.5rem; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .exploreContent {
+    width: 100%; /* Larger width for mobile screens */
+
+  }
+
+  .exploreContent h1 {
+    font-size: 2rem; /* Smaller font size for mobile screens */
+  }
+
+  .exploreContent h4 {
+    font-size: 1.2rem; /* Smaller font size for mobile screens */
+  }
+}
+/* Base styles for the footer */
+/* Base styles for the footer */
